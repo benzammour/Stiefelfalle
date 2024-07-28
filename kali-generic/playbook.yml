@@ -1,0 +1,13 @@
+---
+- hosts: all
+  remote_user: vagrant
+  become_user: vagrant
+  become: true
+  tasks:
+  - name: Update and upgrade apt packages
+    become: yes
+    become_user: root
+    apt:
+      upgrade: yes
+      update_cache: yes
+      cache_valid_time: 86400
