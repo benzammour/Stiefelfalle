@@ -4,10 +4,6 @@
   become_user: vagrant
   become: true
   tasks:
-  - name: Update and upgrade apt packages
-    become: yes
-    become_user: root
-    apt:
-      upgrade: yes
-      update_cache: yes
-      cache_valid_time: 86400
+  - import_tasks: tasks/apt.yml
+  vars_files:
+    - vars/packages.yml

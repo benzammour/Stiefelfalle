@@ -1,0 +1,33 @@
+wm_packages:
+  - i3-wm
+  - i3lock
+  - polybar
+
+apt_packages:
+  - build-essential
+  - chromium
+  - dnsutils
+  - ffuf
+  - gcc
+  - gdb
+  - gem
+  - gobuster
+  - feroxbuster
+  - jq
+  - libpcap-dev
+  - libssl-dev
+  - libbz2-dev 
+  - libsqlite3-dev 
+  - liblzma-dev 
+  - libssl-dev
+  - ncat
+  - python3-setuptools
+  - python3-openssl
+  - python3-pip
+  - python3-venv
+  - seclists
+  - xz-utils
+  - zlib1g-dev
+  - rofi
+  - htop
+  - xwallpaper

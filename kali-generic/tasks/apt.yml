@@ -1,0 +1,49 @@
+- name: Remove useless packages from cache
+  become: yes
+  become_user: root
+  ansible.builtin.apt:
+    autoclean: true      
+
+- name: Update and upgrade apt packages
+  become: yes
+  become_user: root
+  ansible.builtin.apt:
+    update_cache: yes
+    upgrade: yes
+
+- name: Install i3 and polybar
+  become: yes
+  become_user: root
+  ansible.builtin.apt:
+    install_recommends: yes
+    name: "{{ item }}"
+    state: latest 
+  loop: "{{ wm_packages }}"
+
+- name: Install generic apt packages
+  become: yes
+  become_user: root
+  ansible.builtin.apt:
+    install_recommends: yes
+    name: "{{ item }}"
+    state: latest 
+  loop: "{{ apt_packages }}"
+
+- name: Remove useless packages from cache
+  become: yes
+  become_user: root
+  ansible.builtin.apt:
+    autoclean: true      
+
+- name: Remove package dependencies that are no longer required 
+  become: yes
+  become_user: root
+  ansible.builtin.apt:
+    autoremove: true        
+
+- name: Update local Database
+  become: yes
+  become_user: root
+  ansible.builtin.command: updatedb
+
+
