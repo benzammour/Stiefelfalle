@@ -4,6 +4,7 @@
   become_user: vagrant
   become: true
   tasks:
-  - import_tasks: tasks/apt.yml
+    - import_tasks: tasks/apt.yml
+    - import_tasks: tasks/chezmoi.yml
   vars_files:
     - vars/packages.yml

@@ -16,9 +16,9 @@ apt_packages:
   - jq
   - libpcap-dev
   - libssl-dev
-  - libbz2-dev 
-  - libsqlite3-dev 
-  - liblzma-dev 
+  - libbz2-dev
+  - libsqlite3-dev
+  - liblzma-dev
   - libssl-dev
   - ncat
   - python3-setuptools
@@ -31,3 +31,12 @@ apt_packages:
   - rofi
   - htop
   - xwallpaper
+  - wget
+  - curl
+  - tar
+  - unzip
+  - rsync
+  - rclone
+  - git
+  - zsh
+  - awscli
