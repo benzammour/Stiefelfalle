@@ -4,8 +4,11 @@ wm_packages:
   - polybar
 
 apt_packages:
+  - rxvt-unicode
+  - 7zip
   - build-essential
   - chromium
+  - wireshark
   - dnsutils
   - ffuf
   - gcc
@@ -14,12 +17,6 @@ apt_packages:
   - gobuster
   - feroxbuster
   - jq
-  - libpcap-dev
-  - libssl-dev
-  - libbz2-dev
-  - libsqlite3-dev
-  - liblzma-dev
-  - libssl-dev
   - ncat
   - python3-setuptools
   - python3-openssl

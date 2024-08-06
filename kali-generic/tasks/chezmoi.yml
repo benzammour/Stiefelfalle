@@ -30,3 +30,6 @@
       ansible.builtin.apt:
         deb: "https://github.com/twpayne/chezmoi/releases/download/v{{ chezmoi_version_filtered }}/chezmoi_{{ chezmoi_version_filtered }}_linux_amd64.deb"
       when: chezmoi_install
+
+- name: Run chezmoi
+  ansible.builtin.command: chezmoi init --apply https://github.com/benzammour/dotfiles.git
