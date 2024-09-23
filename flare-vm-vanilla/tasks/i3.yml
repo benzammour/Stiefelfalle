@@ -1,0 +1,34 @@
+---
+- name: Copy Xresources
+  copy:
+    src: Xresources
+    dest: "{{ansible_env.HOME}}/.Xresources"
+
+- name: Ensure Fonts directory
+  file:
+    path: "{{ansible_env.HOME}}/.fonts"
+    state: directory
+
+- name: SauceCodePro exists
+  shell: "ls {{ansible_env.HOME}}/.fonts/Sauce*Nerd*Font*"
+  register: sauce_exists
+  ignore_errors: yes
+
+- name: Download SauceCodePro
+  when: sauce_exists is failed
+  ansible.builtin.unarchive:
+    src: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/SourceCodePro.zip
+    dest: "{{ansible_env.HOME}}/.fonts/"
+    remote_src: yes
+- name: Reload Font Cache
+  shell: "fc-cache -fv"
+
+- name: Create Pictures directory
+  file:
+    path: "{{ansible_env.HOME}}/Pictures"
+    state: directory
+
+- name: Copy Background Image
+  copy:
+    src: purple-black-circles.jpg
+    dest: "{{ansible_env.HOME}}/Pictures/purple-black-circles.jpg"

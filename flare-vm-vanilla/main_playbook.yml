@@ -1,0 +1,26 @@
+---
+- name: Test WinRM connection
+  hosts: windows10
+  gather_facts: no
+  tasks:
+    - name: Test connection
+      win_ping:
+      vars:
+        ansible_winrm_server_cert_validation: ignore
+    - name: Download install script
+      ansible.windows.win_get_url:
+        url: https://raw.githubusercontent.com/mandiant/flare-vm/main/install.ps1
+        dest: C:\Users\vagrant\Desktop\install.ps1
+        force: true
+    - name: Unblock File
+      ansible.windows.win_powershell:
+        script: |
+          Unblock-File C:\Users\vagrant\Desktop\install.ps1
+    - name: Set Execution Policy
+      ansible.windows.win_powershell:
+        script: |
+          Set-ExecutionPolicy Unrestricted -Force
+    - name: Run Install script
+      ansible.windows.win_powershell:
+        script: |
+          C:\Users\vagrant\Desktop\install.ps1 -password vagrant -noWait -noGui
