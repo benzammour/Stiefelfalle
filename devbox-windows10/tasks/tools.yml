@@ -3,3 +3,7 @@
     path: C:\Tools\
     state: directory
 
+- name: ThreatCheck
+  ansible.windows.win_command:
+    cmd: "git clone https://github.com/rasta-mouse/ThreatCheck C:\\Tools\\ThreatCheck"
+
