@@ -1,0 +1,12 @@
+---
+- name: Test WinRM connection
+  hosts: windows10
+  tasks:
+    - name: Test connection
+      win_ping:
+      vars:
+        ansible_winrm_server_cert_validation: ignore
+    - import_tasks: tasks/choco.yml
+    - import_tasks: tasks/packages.yml
+    - import_tasks: tasks/tools.yml
+

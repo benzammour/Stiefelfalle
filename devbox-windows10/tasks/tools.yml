@@ -1,0 +1,5 @@
+- name: Ensure Tools folder is present
+  ansible.windows.win_file:
+    path: C:\Tools\
+    state: directory
+
