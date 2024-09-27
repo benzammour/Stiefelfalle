@@ -3,7 +3,14 @@
     path: C:\Tools\
     state: directory
 
+- name: Check if ThreatCheck exists
+  ansible.windows.win_stat:
+    path: 'C:\\Tools\\ThreatCheck'
+  register: directory_data
+
 - name: ThreatCheck
   ansible.windows.win_command:
     cmd: "git clone https://github.com/rasta-mouse/ThreatCheck C:\\Tools\\ThreatCheck"
+  when: not directory_data.stat.exists
+
 

@@ -49,3 +49,8 @@
     name: procmon
     state: latest
 
+- name: Install sysinternals
+  win_chocolatey:
+    name: sysinternals
+    state: latest
+
