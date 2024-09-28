@@ -1,0 +1,2 @@
+- name: Run powershell script
+  script: files/hidden_files.ps1

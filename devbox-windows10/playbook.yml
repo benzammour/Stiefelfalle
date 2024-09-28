@@ -9,4 +9,5 @@
     - import_tasks: tasks/choco.yml
     - import_tasks: tasks/packages.yml
     - import_tasks: tasks/tools.yml
+    - import_tasks: tasks/system_settings.yml
 
