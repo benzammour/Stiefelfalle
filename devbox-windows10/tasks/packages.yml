@@ -54,3 +54,7 @@
     name: sysinternals
     state: latest
 
+- name: Install microsoft-windows-terminal
+  win_chocolatey:
+    name: microsoft-windows-terminal
+    state: present
