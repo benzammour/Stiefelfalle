@@ -2,57 +2,57 @@
 - name: Install git
   win_chocolatey:
     name: git
-    state: latest
+    state: present
 
-- name: Install latest notepadplusplus
+- name: Install present notepadplusplus
   win_chocolatey:
     name: notepadplusplus
-    state: latest
+    state: present
 
 - name: Install Visual Studio Community
   win_chocolatey:
     name: visualstudio2022community
-    state: latest
+    state: present
 
 - name: Install Windows SDK
   win_chocolatey:
     name: windows-sdk-10.0
-    state: latest
+    state: present
 
 - name: Install VS Buildtools
   win_chocolatey:
     name: visualstudio2022buildtools
-    state: latest
+    state: present
 
 - name: Install VSCode
   win_chocolatey:
     name: vscode
-    state: latest
+    state: present
 
 - name: Install nim
   win_chocolatey:
     name: nim
-    state: latest
+    state: present
 
 - name: Install golang
   win_chocolatey:
     name: golang
-    state: latest
+    state: present
 
 - name: Install python3
   win_chocolatey:
     name: python3
-    state: latest
+    state: present
 
 - name: Install procmon
   win_chocolatey:
     name: procmon
-    state: latest
+    state: present
 
 - name: Install sysinternals
   win_chocolatey:
     name: sysinternals
-    state: latest
+    state: present
 
 - name: Install microsoft-windows-terminal
   win_chocolatey:
