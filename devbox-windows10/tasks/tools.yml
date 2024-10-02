@@ -13,4 +13,6 @@
     cmd: "git clone https://github.com/rasta-mouse/ThreatCheck C:\\Tools\\ThreatCheck"
   when: not directory_data.stat.exists
 
+- name: Run powershell script
+  script: files/vscode_plugins.ps1
 
