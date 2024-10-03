@@ -16,3 +16,9 @@
 - name: Run powershell script
   script: files/vscode_plugins.ps1
 
+- name: Download x64dbg
+  ansible.windows.win_get_url:
+    url: https://netcologne.dl.sourceforge.net/project/x64dbg/snapshots/snapshot_2024-07-28_17-00.zip
+    dest: C:\Tools\x64dbg.zip
+    force: false
+
