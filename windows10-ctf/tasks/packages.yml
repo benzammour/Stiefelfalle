@@ -1,0 +1,40 @@
+- name: Install git
+  win_chocolatey:
+    name: git
+    state: present
+
+- name: Install VSCode
+  win_chocolatey:
+    name: vscode
+    state: present
+
+- name: Install python3
+  win_chocolatey:
+    name: python3
+    state: present
+
+- name: Install procmon
+  win_chocolatey:
+    name: procmon
+    state: present
+
+- name: Install sysinternals
+  win_chocolatey:
+    name: sysinternals
+    state: present
+
+- name: Install microsoft-windows-terminal
+  win_chocolatey:
+    name: microsoft-windows-terminal
+    state: present
+
+- name: Install ILSpy
+  win_chocolatey:
+    name: ilspy
+    state: present
+
+- name: Install dnspy
+  win_chocolatey:
+    name: dnspy
+    version: '6.1.8'  # is latest release as project is archived
+    state: present

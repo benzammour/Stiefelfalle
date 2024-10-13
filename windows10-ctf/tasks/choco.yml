@@ -1,0 +1,9 @@
+- name: Ensure Chocolatey itself is installed
+  win_chocolatey:
+    name: chocolatey
+
+- name: Upgrade installed packages
+  win_chocolatey:
+    name: all
+    state: latest
+

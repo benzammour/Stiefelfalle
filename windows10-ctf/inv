@@ -1,0 +1,8 @@
+[windows10-ctf]
+192.168.56.130
+
+[windows10-ctf:vars]
+ansible_user=vagrant
+ansible_password=vagrant
+ansible_connection=winrm
+ansible_winrm_server_cert_validation=ignore
